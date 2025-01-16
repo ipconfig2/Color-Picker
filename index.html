@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Color Survey</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF00FF">
+    <form action="mailto:jdoe@hotmail.com" method="POST" name="ColorSurvey">
+        <h1>Color Survey</h1>
+        <input type="hidden" name="recipient" value="jdoe@hotmail.com">
+        <table border="0">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="Visitor" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="Email" placeholder="your email"></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="tel" name="Phone" placeholder="555-123-4567"></td>
+                <td>Ext:</td>
+                <td><input type="text" name="PhoneExt" placeholder="890"></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select name="State">
+                        <option value="California">California</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Florida">Florida</option>
+                        <option value="New York">New York</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="Password"></td>
+                <td>Confirm:</td>
+                <td><input type="password" name="PasswordConfirm"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="Gender" value="Female"> Female
+                    <input type="radio" name="Gender" value="Male"> Male
+                </td>
+            </tr>
+            <tr>
+                <td>Favorite Colors:</td>
+                <td>
+                    <input type="checkbox" name="FavColors" value="Black"> <font color="#000000">Black</font><br>
+                    <input type="checkbox" name="FavColors" value="Grey"> <font color="#666666">Grey</font><br>
+                    <input type="checkbox" name="FavColors" value="Red"> <font color="#FF0000">Red</font><br>
+                    <input type="checkbox" name="FavColors" value="Pink"> <font color="#FF3399">Pink</font><br>
+                    <input type="checkbox" name="FavColors" value="Orange"> <font color="#FFA500">Orange</font><br>
+                    <input type="checkbox" name="FavColors" value="Yellow"> <font color="#FFFF00">Yellow</font><br>
+                    <input type="checkbox" name="FavColors" value="Green"> <font color="#008000">Green</font><br>
+                    <input type="checkbox" name="FavColors" value="Blue"> <font color="#0000FF">Blue</font><br>
+                    <input type="checkbox" name="FavColors" value="Violet"> <font color="#8F00FF">Violet</font><br>
+                    <input type="checkbox" name="FavColors" value="White"> <font color="#000000">White</font><br>
+                    <input type="checkbox" name="FavColors" value="Other"> <font color="#000000">Other</font><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td><textarea name="Comments" rows="3" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Code:</td>
+                <td><input type="text" name="InternalCode" value="" readonly> For internal use only.</td>
+            </tr>
+        </table>
+        <button type="button" id="sendSurveyButton">Send Survey</button>
+        <button type="button" id="clearButton">Clear Form</button>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.forms['ColorSurvey'].Visitor.value = "Enter your name";
+            document.forms['ColorSurvey'].Email.value = "your email";
+            document.forms['ColorSurvey'].Phone.value = "555-123-4567";
+            document.forms['ColorSurvey'].PhoneExt.value = "890";
+            document.forms['ColorSurvey'].State.selectedIndex = 4; 
+            document.forms['ColorSurvey'].Password.value = "shhhhh";
+            document.forms['ColorSurvey'].PasswordConfirm.value = "shhhhh";
+            document.forms['ColorSurvey'].Gender[0].checked = true; 
+            document.forms['ColorSurvey'].FavColors[2].checked = true; 
+            document.forms['ColorSurvey'].FavColors[6].checked = true;
+            document.forms['ColorSurvey'].FavColors[7].checked = true;
+            document.forms['ColorSurvey'].Comments.value = "No comments";
+            document.forms['ColorSurvey'].InternalCode.value = "2F762";
+        });
+
+        document.getElementById("clearButton").addEventListener("click", function () {
+            document.forms['ColorSurvey'].Visitor.value = "";
+            document.forms['ColorSurvey'].Email.value = "";
+            document.forms['ColorSurvey'].Phone.value = "";
+            document.forms['ColorSurvey'].PhoneExt.value = "";
+            document.forms['ColorSurvey'].State.selectedIndex = 5;
+            document.forms['ColorSurvey'].Password.value = "";
+            document.forms['ColorSurvey'].PasswordConfirm.value = "";
+            document.forms['ColorSurvey'].Gender[0].checked = false;
+            document.forms['ColorSurvey'].Gender[1].checked = false;
+            document.forms['ColorSurvey'].FavColors[1].checked = false;
+            document.forms['ColorSurvey'].FavColors[2].checked = false;
+            document.forms['ColorSurvey'].FavColors[3].checked = false;
+            document.forms['ColorSurvey'].FavColors[4].checked = false;
+            document.forms['ColorSurvey'].FavColors[5].checked = false;
+            document.forms['ColorSurvey'].FavColors[6].checked = false;
+            document.forms['ColorSurvey'].FavColors[7].checked = false;
+            document.forms['ColorSurvey'].FavColors[8].checked = false;
+            document.forms['ColorSurvey'].FavColors[9].checked = false;
+            document.forms['ColorSurvey'].FavColors[10].checked = false;
+            document.forms['ColorSurvey'].Comments.value = "";
+            document.forms['ColorSurvey'].InternalCode.value = "";
+        });
+    </script>
+</body>
+</html>
